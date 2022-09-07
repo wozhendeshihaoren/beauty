@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.springboot_01_ssm_startquick.Mapper.ImageMapper">
+    <select id="getImageByType" resultType="com.itheima.springboot_01_ssm_startquick.entity.Image">
+        SELECT id,imageurl,imagetitle,imagetype,imagestate
+        FROM image
+        WHERE imagetype = #{type} AND imagestate = 1
+    </select>
+</mapper>
