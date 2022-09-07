@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3f5977-0a39-448b-a7a9-d4ceb51cf51e" name="Changes" comment="" />
+    <list default="true" id="ab3f5977-0a39-448b-a7a9-d4ceb51cf51e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +107,7 @@
       <workItem from="1662528299387" duration="75000" />
       <workItem from="1662530009816" duration="1360000" />
       <workItem from="1662531587466" duration="1776000" />
-      <workItem from="1662533496765" duration="1316000" />
+      <workItem from="1662533496765" duration="2003000" />
     </task>
     <task id="LOCAL-00001" summary="美容小程序-0908-添加了两个功能，分别是轮播图和导航栏">
       <created>1662532625820</created>
