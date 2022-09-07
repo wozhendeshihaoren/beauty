@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab3f5977-0a39-448b-a7a9-d4ceb51cf51e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/domain/asfd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <workItem from="1662528299387" duration="75000" />
       <workItem from="1662530009816" duration="1360000" />
       <workItem from="1662531587466" duration="1776000" />
-      <workItem from="1662533496765" duration="4848000" />
+      <workItem from="1662533496765" duration="5090000" />
     </task>
     <task id="LOCAL-00001" summary="美容小程序-0908-添加了两个功能，分别是轮播图和导航栏">
       <created>1662532625820</created>
@@ -144,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662535036761</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="我是好人">
+      <created>1662541710907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662541710907</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +171,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="美容小程序-0908-添加了两个功能，分别是轮播图和导航栏" />
-    <option name="LAST_COMMIT_MESSAGE" value="美容小程序-0908-添加了两个功能，分别是轮播图和导航栏" />
+    <MESSAGE value="我是好人" />
+    <option name="LAST_COMMIT_MESSAGE" value="我是好人" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
