@@ -38,5 +38,16 @@ public class ProjectServiceImpl implements ProjectService {
 
     }
 
+    @Override
+    public RespModel getById(int id) {
+        try {
+              Project byId = projectMapper.getById(id);
+
+            return new RespModel(RespCode.SUCCESS,byId);
+        }catch (Exception e) {
+            return new RespModel(RespCode.FAIL,null);
+        }
+    }
+
 
 }

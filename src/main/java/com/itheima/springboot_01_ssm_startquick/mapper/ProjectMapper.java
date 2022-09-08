@@ -1,7 +1,6 @@
 package com.itheima.springboot_01_ssm_startquick.mapper;
 
 import com.itheima.springboot_01_ssm_startquick.entity.Project;
-import com.itheima.springboot_01_ssm_startquick.resp.RespModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -22,4 +21,11 @@ public interface ProjectMapper {
      * @return
      */
     long totalCount();
+
+    /**
+     * 根据id返回一个project对象
+     * @return
+     * @param id
+     */
+    Project getById(int id);
 }

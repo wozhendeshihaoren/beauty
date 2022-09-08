@@ -23,4 +23,8 @@ public class ProjectController {
     public RespModel getAllProject( int pageNum,  int size){
         return projectService.getAllProject(pageNum,size);
     }
+    @RequestMapping("byId")
+    public RespModel byId(int id){
+        return projectService.getById(id);
+    }
 }

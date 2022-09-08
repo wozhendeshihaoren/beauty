@@ -17,4 +17,11 @@ public interface ProjectService {
      */
     RespModel getAllProject(int pageNum,int size) ;
 
+    /**
+     * 返回一个project
+     * @param id
+     * @return
+     */
+    RespModel getById(int id);
+
 }
