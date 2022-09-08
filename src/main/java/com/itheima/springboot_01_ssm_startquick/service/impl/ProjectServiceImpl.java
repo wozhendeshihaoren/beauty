@@ -1,7 +1,10 @@
 package com.itheima.springboot_01_ssm_startquick.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.itheima.springboot_01_ssm_startquick.entity.Project;
 import com.itheima.springboot_01_ssm_startquick.mapper.ProjectMapper;
+import com.itheima.springboot_01_ssm_startquick.model.ProjectModel;
 import com.itheima.springboot_01_ssm_startquick.resp.RespCode;
 import com.itheima.springboot_01_ssm_startquick.resp.RespModel;
 import com.itheima.springboot_01_ssm_startquick.service.ProjectService;
@@ -19,9 +22,15 @@ public class ProjectServiceImpl implements ProjectService {
     @Resource
     private ProjectMapper projectMapper;
     @Override
-    public RespModel getAllProject() {
+    public RespModel getAllProject(int pageNum,int size) {
         try {
-            return new RespModel(RespCode.SUCCESS,projectMapper.getAllProject());
+            int offset = (pageNum-1)*10;
+            Page<Object> objects = PageHelper.offsetPage(offset, size);
+            List<Project> allProject = projectMapper.getAllProject();
+
+            long total = projectMapper.totalCount();
+            ProjectModel<Project> projectModel = new ProjectModel<>(allProject,total);
+            return new RespModel(RespCode.SUCCESS,projectModel);
         }catch (Exception e){
             e.printStackTrace();
             return new RespModel(RespCode.FAIL,null);

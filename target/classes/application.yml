@@ -30,7 +30,7 @@ spring:
 #      on-profile: pro
 #server:
 server:
-  port: 80
+  port: 82
 mybatis:
   mapper-locations: classpath:com/itheima/springboot_01_ssm_startquick/mapper/**/*.xml
-#  port: 81
+#  port: 82

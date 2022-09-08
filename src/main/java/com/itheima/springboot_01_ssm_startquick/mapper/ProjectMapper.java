@@ -16,4 +16,10 @@ public interface ProjectMapper {
      * @return
      */
     public List<Project> getAllProject();
+
+    /**
+     * 返回project的总数量
+     * @return
+     */
+    long totalCount();
 }

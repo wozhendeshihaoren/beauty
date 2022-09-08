@@ -15,6 +15,6 @@ public interface ProjectService {
      * 操作ProjectMapper,与mapper交互
      * @return
      */
-    RespModel getAllProject() ;
+    RespModel getAllProject(int pageNum,int size) ;
 
 }
