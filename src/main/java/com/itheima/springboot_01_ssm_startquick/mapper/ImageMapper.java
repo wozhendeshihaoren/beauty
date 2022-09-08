@@ -1,4 +1,4 @@
-package com.itheima.springboot_01_ssm_startquick.Mapper;
+package com.itheima.springboot_01_ssm_startquick.mapper;
 
 import com.itheima.springboot_01_ssm_startquick.entity.Image;
 import org.apache.ibatis.annotations.Mapper;

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace :命名空间 注意：写接口的全限定类名-->
+<mapper namespace="com.itheima.springboot_01_ssm_startquick.mapper.ProjectMapper">
+    <resultMap id="projectImageMap" type="com.itheima.springboot_01_ssm_startquick.entity.Project">
+        <!--   property 对应实体类的属性名称    column 对应数据库的列的名称（别名）    -->
+        <id property="id" column="pid"></id>
+        <result property="proExplain" column="proexplain"></result>
+        <result property="proPrice" column="proprice"></result>
+        <result property="proStep" column="prostep"></result>
+        <result property="proTypeId" column="protypeid"></result>
+        <result property="proName" column="proname"></result>
+        <result property="proStatus" column="prostatus"></result>
+        <result property="busId" column="busid"></result>
+        <result property="tecId" column="tecid"></result>
+        <association property="image" javaType="com.itheima.springboot_01_ssm_startquick.entity.Image">
+            <result property="imageURL" column="imageurl"></result>
+        </association>
+
+    </resultMap>
+
+
+
+    <select id="getAllProject" resultMap="projectImageMap">
+        SELECT
+            p.id pid,
+            p.proexplain proexplain,
+            p.proprice proprice,
+            p.prostep prostep,
+            p.protypeid protypeid,
+            p.proname proname,
+            p.prostatus prostatus,
+            p.busid busid,
+            p.tecid tecid,
+
+            i.imageurl imageurl
+        FROM
+            project p,image i
+        WHERE
+            p.imageid = i.id
+          AND
+            p.prostatus = '1'
+    </select>
+</mapper>

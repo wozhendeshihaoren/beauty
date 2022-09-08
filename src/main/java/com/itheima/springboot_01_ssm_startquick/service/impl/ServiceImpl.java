@@ -1,6 +1,6 @@
-package com.itheima.springboot_01_ssm_startquick.service.serviceoiml;
+package com.itheima.springboot_01_ssm_startquick.service.impl;
 
-import com.itheima.springboot_01_ssm_startquick.Mapper.ImageMapper;
+import com.itheima.springboot_01_ssm_startquick.mapper.ImageMapper;
 import com.itheima.springboot_01_ssm_startquick.entity.Image;
 import com.itheima.springboot_01_ssm_startquick.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
