@@ -1,6 +1,8 @@
 package com.itheima.springboot_01_ssm_startquick.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
@@ -23,4 +25,14 @@ public class WebImageConfig extends WebMvcConfigurationSupport {
         //通过image访问本地的图片
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
+
+
+    /**
+     * image配置拦截器
+     */
+//    @Override
+//    protected void addInterceptors(InterceptorRegistry registry) {
+//        InterceptorRegistration interceptorRegistration = registry.addInterceptor(new ImageIntercetor());
+//        interceptorRegistration.addPathPatterns("/image/*");
+//    }
 }

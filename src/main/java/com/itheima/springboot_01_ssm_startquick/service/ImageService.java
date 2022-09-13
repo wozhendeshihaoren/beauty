@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * @author woshihaoren
  */
-@Mapper
 public interface ImageService {
 
     /***

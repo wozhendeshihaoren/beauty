@@ -2,6 +2,8 @@ package com.itheima.springboot_01_ssm_startquick.controller;
 
 import com.itheima.springboot_01_ssm_startquick.resp.RespModel;
 import com.itheima.springboot_01_ssm_startquick.service.ProjectService;
+import com.itheima.springboot_01_ssm_startquick.service.impl.ProjectServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,14 +18,15 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/project")
 public class ProjectController {
+
     @Resource
     private ProjectService projectService;
 
     @RequestMapping("/all")
-    public RespModel getAllProject( int pageNum,  int size){
+    public RespModel getAllProject( int pageNum,int size){
         return projectService.getAllProject(pageNum,size);
     }
-    @RequestMapping("byId")
+    @RequestMapping("/byId")
     public RespModel byId(int id){
         return projectService.getById(id);
     }

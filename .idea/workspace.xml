@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab3f5977-0a39-448b-a7a9-d4ceb51cf51e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/config/ImageIntercetor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/util/StringCheckUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/itheima/springboot_01_ssm_startquick/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/config/WebImageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/config/WebImageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/controller/ImageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/mapper/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/mapper/ProjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/itheima/springboot_01_ssm_startquick/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/itheima/springboot_01_ssm_startquick/mapper/ProjectMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/Mapper/ProjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/Mapper/ProjectMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/Mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/Mapper/ProjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/resp/RespCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/resp/RespCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/impl/ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/service/impl/ImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/config/WebImageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/config/WebImageConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/controller/ImageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/controller/ProjectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/ProjectService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/impl/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/impl/ProjectServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/resp/RespCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/resp/RespCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/ImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/springboot_01_ssm_startquick/service/impl/ServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="mybatis-config" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -58,6 +69,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/itheima/springboot_01_ssm_startquick/controller" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -124,7 +136,15 @@
       <workItem from="1662533496765" duration="6291000" />
       <workItem from="1662554279308" duration="3826000" />
       <workItem from="1662599554451" duration="5782000" />
-      <workItem from="1662617189646" duration="9494000" />
+      <workItem from="1662617189646" duration="9973000" />
+      <workItem from="1662639892765" duration="2253000" />
+      <workItem from="1662685224266" duration="2555000" />
+      <workItem from="1662727063096" duration="1474000" />
+      <workItem from="1662736077232" duration="588000" />
+      <workItem from="1662736701734" duration="870000" />
+      <workItem from="1663037045129" duration="596000" />
+      <workItem from="1663049798808" duration="4625000" />
+      <workItem from="1663070484742" duration="7361000" />
     </task>
     <task id="LOCAL-00001" summary="美容小程序-0908-添加了两个功能，分别是轮播图和导航栏">
       <created>1662532625820</created>
@@ -189,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662621038419</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="09-08增加了美容项目列表的功能,下拉触发功能加载列表功能,增加按图片进入详细内容功能">
+      <created>1662634319099</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1662634319099</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +240,8 @@
     <MESSAGE value="我真的是好人哦" />
     <MESSAGE value="09-08增加了美容项目列表的功能" />
     <MESSAGE value="09-08增加了美容项目列表的功能,下拉触发功能加载列表功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="09-08增加了美容项目列表的功能,下拉触发功能加载列表功能" />
+    <MESSAGE value="09-08增加了美容项目列表的功能,下拉触发功能加载列表功能,增加按图片进入详细内容功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="09-08增加了美容项目列表的功能,下拉触发功能加载列表功能,增加按图片进入详细内容功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
