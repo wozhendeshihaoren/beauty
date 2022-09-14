@@ -22,8 +22,8 @@ public class ImageController {
 
     @Autowired
     private ImageService imageService;
-    @RequestMapping(value = "/image")
-    public List<Image> getImageType( String type, HttpServletRequest request) {
+   @GetMapping("image/{type}")
+    public List<Image> getImageType( @PathVariable String type) {
         return imageService.getImageByType(type);
     }
 }

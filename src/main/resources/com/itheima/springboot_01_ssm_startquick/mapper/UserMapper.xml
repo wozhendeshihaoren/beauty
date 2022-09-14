@@ -21,4 +21,9 @@
         INSERT INTO user(nickname,imageurl,username,phone,password)
         VALUES(#{nickName},#{imageURL},#{username},#{phone},#{password})
         </insert>
+
+        <update id="updateUser"  parameterType="com.itheima.springboot_01_ssm_startquick.entity.User">
+                UPDATE `user`
+                SET sessionkey = #{sessionKey},openid = #{openId}, token = #{token} WHERE phone = #{phone}
+        </update>
 </mapper>

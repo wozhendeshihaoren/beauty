@@ -23,4 +23,10 @@ public interface UserMapper {
      * @param user
      */
     void insert(User user);
+
+    /**
+     * 更新用户sessionKey,openId,token的状态
+     * @param user
+     */
+     void updateUser(User user);
 }
