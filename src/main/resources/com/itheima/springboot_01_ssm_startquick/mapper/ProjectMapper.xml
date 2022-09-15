@@ -14,9 +14,9 @@
         <result property="proStatus" column="prostatus"></result>
         <result property="busId" column="busid"></result>
         <result property="tecId" column="tecid"></result>
-        <association property="image" javaType="com.itheima.springboot_01_ssm_startquick.entity.Image">
-            <result property="imageURL" column="imageurl"></result>
-        </association>
+        <result property="image.imageURL" column="imageurl"></result>
+        <result property="business.busName" column="busname"></result>
+        <result property="business.serverTime" column="servertime"></result>
 
     </resultMap>
     <select id="getAllProject" resultMap="projectImageMap">
@@ -56,11 +56,15 @@
             p.busid busid,
             p.tecid tecid,
 
-            i.imageurl imageurl
+            i.imageurl imageurl,
+            b.busname busname,
+            b.servertime servertime
         FROM
-            project p,image i
+            project p,image i,business b
         WHERE
             p.imageid = i.id
+          AND
+            p.busId = b.id
           AND
             p.prostatus = '1'
           AND p.id = #{id}

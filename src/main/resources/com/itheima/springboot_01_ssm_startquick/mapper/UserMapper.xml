@@ -13,12 +13,12 @@
         username,
         phone,
         password
-        FROM user
+        FROM `user`
         WHERE phone = #{phone}
         </select>
 
         <insert id="insert" parameterType="com.itheima.springboot_01_ssm_startquick.entity.User">
-        INSERT INTO user(nickname,imageurl,username,phone,password)
+        INSERT INTO `user`(nickname,imageurl,username,phone,password)
         VALUES(#{nickName},#{imageURL},#{username},#{phone},#{password})
         </insert>
 
@@ -26,4 +26,19 @@
                 UPDATE `user`
                 SET sessionkey = #{sessionKey},openid = #{openId}, token = #{token} WHERE phone = #{phone}
         </update>
+
+        <select id="getUserByToken" resultType="com.itheima.springboot_01_ssm_startquick.entity.User" parameterType="string">
+                SELECT
+                        id,
+                        nickname,
+                        openid,
+                        imageurl,
+                        sessionkey,
+                        token,
+                        username,
+                        phone,
+                        password
+                FROM `user`
+                where token = #{token}
+        </select>
 </mapper>

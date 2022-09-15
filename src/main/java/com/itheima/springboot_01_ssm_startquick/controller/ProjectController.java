@@ -26,6 +26,12 @@ public class ProjectController {
     public RespModel getAllProject( int pageNum,int size){
         return projectService.getAllProject(pageNum,size);
     }
+
+    /**
+     * 通过项目id获取用户数据
+     * @param id
+     * @return
+     */
     @RequestMapping("/byId")
     public RespModel byId(int id){
         return projectService.getById(id);

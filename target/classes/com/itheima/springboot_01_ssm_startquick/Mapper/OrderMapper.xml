@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.springboot_01_ssm_startquick.mapper.OrderMapper">
+   <insert id="insert" parameterType="com.itheima.springboot_01_ssm_startquick.entity.Order">
+       INSERT INTO
+           `order`(openid,proname,makedate,username,orderstate,placedate,usertell,information,busid,proid,tecid)
+       values (#{openId},#{proName},#{makeDate},#{userName},#{orderState},#{placeDate},#{userTell},#{information},
+               #{busId},#{proId},#{tecId})
+   </insert>
+</mapper>

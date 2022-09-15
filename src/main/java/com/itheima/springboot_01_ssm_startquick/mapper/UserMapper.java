@@ -29,4 +29,12 @@ public interface UserMapper {
      * @param user
      */
      void updateUser(User user);
+
+
+    /**
+     * 根据token查询数据，校验用户是否登录
+     * @param token
+     * @return
+     */
+    List<User> getUserByToken(String token);
 }
