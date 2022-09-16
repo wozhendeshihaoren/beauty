@@ -8,4 +8,61 @@
        values (#{openId},#{proName},#{makeDate},#{userName},#{orderState},#{placeDate},#{userTell},#{information},
                #{busId},#{proId},#{tecId})
    </insert>
+     <resultMap id="orderResultMap" type="com.itheima.springboot_01_ssm_startquick.entity.Order">
+         <id property="id" column="oid"></id>
+         <result property="openId" column="openid"></result>
+         <result property="proName" column="proname"></result>
+         <result property="makeDate" column="makedate"></result>
+         <result property="userName" column="username"></result>
+         <result property="orderState" column="orderstate"></result>
+         <result property="placeDate" column="placedate"></result>
+         <result property="userTell" column="usertell"></result>
+         <result property="information" column="information"></result>
+         <result property="tecId" column="tecid"></result>
+
+         <result property="business.busName" column="busname"></result>
+         <result property="business.serverTime" column="servertime"></result>
+
+         <result property="project.proPrice" column="proprice"></result>
+
+         <result property="project.image.imageURL" column="imageurl"></result>
+
+     </resultMap>
+
+    <select id="getOrderAll" resultMap="orderResultMap">
+        SELECT
+        o.id oid,
+        o.openid openid,
+        o.proname proname,
+        o.makedate makedate,
+        o.username username,
+        o.orderstate orderstate,
+        o.placedate placedate,
+        o.usertell usertell,
+        o.information information,
+        o.busid busid,
+        o.proid proid,
+        o.tecid tecid,
+
+        b.busname busname,
+        b.servertime servertime,
+
+        p.proprice proprice,
+
+        i.imageurl imageurl
+
+        FROM `order` o, business b, project p, image i
+
+        WHERE
+        o.busid = b.id
+        AND
+        o.proid = p.id
+        AND
+        p.imageid = i.id
+        AND
+            openid = #{openId}
+          <if test="state != null and state != ''">
+              AND  orderstate = #{state}
+          </if>
+    </select>
 </mapper>

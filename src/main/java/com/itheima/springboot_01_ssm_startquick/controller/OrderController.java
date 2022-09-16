@@ -24,4 +24,9 @@ public class OrderController {
         return  orderService.createOrder(token,order);
     }
 
+    @RequestMapping("/getAll")
+    public RespModel getOrderAll(String token,String state){
+        return orderService.getOrderAll(token,state);
+    }
+
 }

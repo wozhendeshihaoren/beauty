@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.springboot_01_ssm_startquick.mapper.TechnicianMapper">
+    <select id="getTechnicianAll" resultType="com.itheima.springboot_01_ssm_startquick.entity.Technician">
+        SELECT
+            id,
+            techexplain,
+            techname,
+            busid,
+            imageurl
+        FROM
+            technician
+    </select>
+</mapper>

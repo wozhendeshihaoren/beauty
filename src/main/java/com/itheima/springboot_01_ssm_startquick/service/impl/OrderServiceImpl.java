@@ -62,4 +62,27 @@ public class OrderServiceImpl implements OrderService {
 
     }
 
+    @Override
+    public RespModel getOrderAll(String token, String state) {
+        /**
+         * 先根据tonken获取用户的openid
+         */
+        try {
+
+        if(StringCheckUtil.isEmpty(token)){
+            return new RespModel(RespCode.FAIL,null);
+        }
+        List<User> userByToken = userMapper.getUserByToken(token);
+        String openId = userByToken.get(0).getOpenId();
+
+        //根据openid去和state去获取订单
+        List<Order> orderAll = orderMapper.getOrderAll(openId, state);
+        return new RespModel(RespCode.SUCCESS,orderAll);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+    }
+
 }
