@@ -9,7 +9,7 @@
         <result property="techName" column="techname"></result>
         <result property="busId" column="busid"></result>
         <result property="imageURL" column="imageurl"></result>
-        
+        <result property="flag" column="flag"></result>
         <collection property="projects" ofType="com.itheima.springboot_01_ssm_startquick.entity.Project">
             <id property="id" column="pid"></id>
             <result property="proName" column="proname"></result>
@@ -38,11 +38,14 @@
 
             p.id pid,
             p.proname proname,
-            p.proprice proprice
+            p.proprice proprice,
+            f.flag flag
         FROM
-            technician t,project p
+            technician t,project p,follow f
         WHERE
             t.id = p.tecid
+          AND
+            t.id = f.tid
           AND
             t.id = #{id}
     </select>

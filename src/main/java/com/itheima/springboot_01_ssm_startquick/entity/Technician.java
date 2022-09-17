@@ -36,6 +36,8 @@ public class Technician implements Serializable {
     /**
      * 技师头像路径
      */
+    private String flag;
+
     private String imageURL;
 
     private List<Project> projects;

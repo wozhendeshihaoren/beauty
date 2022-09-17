@@ -37,6 +37,8 @@ public class ProjectController {
         return projectService.getById(id);
     }
 
+
+
     @RequestMapping("/navTitleType")
     public  RespModel getNavTitleProject(int proTypeId){
 
