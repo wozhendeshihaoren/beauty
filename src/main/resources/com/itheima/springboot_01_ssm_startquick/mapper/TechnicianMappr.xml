@@ -2,6 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itheima.springboot_01_ssm_startquick.mapper.TechnicianMapper">
+    
+    <resultMap id="technicianResultMap" type="com.itheima.springboot_01_ssm_startquick.entity.Technician">
+        <id property="id" column="tid"></id>
+        <result property="techExplain" column="techexplain"></result>
+        <result property="techName" column="techname"></result>
+        <result property="busId" column="busid"></result>
+        <result property="imageURL" column="imageurl"></result>
+        
+        <collection property="projects" ofType="com.itheima.springboot_01_ssm_startquick.entity.Project">
+            <id property="id" column="pid"></id>
+            <result property="proName" column="proname"></result>
+            <result property="proPrice" column="proprice"></result>
+        </collection>
+       
+    </resultMap> 
     <select id="getTechnicianAll" resultType="com.itheima.springboot_01_ssm_startquick.entity.Technician">
         SELECT
             id,
@@ -11,5 +26,24 @@
             imageurl
         FROM
             technician
+    </select>
+
+    <select id="getTechnicianOne" resultMap="technicianResultMap">
+        SELECT
+            t.id tid,
+            t.techexplain techexplain,
+            t.techname techname,
+            t.busid busid,
+            t.imageurl imageurl,
+
+            p.id pid,
+            p.proname proname,
+            p.proprice proprice
+        FROM
+            technician t,project p
+        WHERE
+            t.id = p.tecid
+          AND
+            t.id = #{id}
     </select>
 </mapper>

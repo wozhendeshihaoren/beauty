@@ -49,5 +49,24 @@ public class ProjectServiceImpl implements ProjectService {
         }
     }
 
+    /**
+     * 根据project的protypeid查询
+     * @param proTypeId
+     * @return
+     */
+    @Override
+    public RespModel getNavTitleProject(int proTypeId) {
+
+        try {
+        List<Project> navTitleProject = projectMapper.getNavTitleProject(proTypeId);
+        return new RespModel(RespCode.SUCCESS,navTitleProject);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+
+    }
+
 
 }

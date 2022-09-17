@@ -30,4 +30,20 @@ public class TechnicianServiceImpl implements TechnicianService {
             return new RespModel(RespCode.FAIL,null);
         }
     }
+
+    @Override
+    public RespModel getTechnicianOne(int id) {
+
+         try {
+             //根据id请求技师的信息
+             List<Technician> technicianOne = technicianMapper.getTechnicianOne(id);
+             Technician technician = technicianOne.get(0);
+
+             //返回技师信息
+             return new RespModel(RespCode.SUCCESS,technician);
+         }catch (Exception e) {
+             e.printStackTrace();
+             return  new RespModel(RespCode.FAIL,null);
+         }
+    }
 }

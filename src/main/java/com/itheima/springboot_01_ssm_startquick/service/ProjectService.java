@@ -24,4 +24,11 @@ public interface ProjectService {
      */
     RespModel getById(int id);
 
+    /**
+     * 根据project的protypeid查询
+     * @param proTypeId
+     * @return
+     */
+    RespModel getNavTitleProject(int proTypeId);
+
 }

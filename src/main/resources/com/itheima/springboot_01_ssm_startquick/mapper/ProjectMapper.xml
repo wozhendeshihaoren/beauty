@@ -38,6 +38,32 @@
             p.imageid = i.id
           AND
             p.prostatus = '1'
+         <if test="protypeid != null and protypeid != ''">
+           AND  p.protypeid = #{protypeid}
+         </if>
+    </select>
+    <select id="getNavTitleProject" resultMap="projectImageMap">
+        SELECT
+        p.id pid,
+        p.proexplain proexplain,
+        p.proprice proprice,
+        p.prostep prostep,
+        p.protypeid protypeid,
+        p.proname proname,
+        p.prostatus prostatus,
+        p.busid busid,
+        p.tecid tecid,
+
+        i.imageurl imageurl
+        FROM
+        project p,image i
+        WHERE
+        p.imageid = i.id
+        AND
+        p.prostatus = '1'
+        <if test="proTypeId != null and proTypeId != '' and proTypeId != 0">
+            AND  p.protypeid = #{proTypeId}
+        </if>
     </select>
 
     <select id="totalCount" resultType="long">

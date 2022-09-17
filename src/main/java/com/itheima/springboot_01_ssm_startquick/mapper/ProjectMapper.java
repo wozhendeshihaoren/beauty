@@ -28,4 +28,11 @@ public interface ProjectMapper {
      * @param id
      */
     Project getById(int id);
+
+    /**
+     * 根据proTypeId获取项目
+     * @param proTypeId
+     * @return
+     */
+     List<Project> getNavTitleProject(int proTypeId);
 }

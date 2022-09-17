@@ -16,4 +16,11 @@ public interface TechnicianMapper {
      * @return
      */
     List<Technician> getTechnicianAll();
+
+    /**
+     * 根据传入的id查询相关的技师和技师相关的项目
+     * @param id
+     * @return
+     */
+    List<Technician> getTechnicianOne(int id);
 }

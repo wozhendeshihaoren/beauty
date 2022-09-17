@@ -12,4 +12,11 @@ public interface TechnicianService {
      * @return
      */
     RespModel getTechnicianAll();
+
+    /**
+     * 根据传入的id查询相关的技师和技师相关的项目
+     * @param id
+     * @return
+     */
+    RespModel getTechnicianOne(int id);
 }
