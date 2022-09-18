@@ -32,4 +32,45 @@ public class FollowServiceImpl implements FollowService {
       }
 
     }
+
+    @Override
+    public RespModel updateFollow(Follow follow) {
+
+        try {
+
+            followMapper.updateFollow(follow);
+            return new RespModel(RespCode.SUCCESS_5,null);
+        }catch (Exception e){
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+
+    }
+
+    @Override
+    public RespModel getFollowFlagTrue(String flag) {
+        try {
+
+
+        List<Follow> followFlagTrue = followMapper.getFollowFlagTrue(flag);
+        return new RespModel(RespCode.SUCCESS,followFlagTrue);
+        }catch (Exception e) {
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+    }
+
+    @Override
+    public RespModel totalFollowFlag() {
+
+        try {
+            Long totalFlag = followMapper.totalFollowFlag();
+
+            return  new RespModel(RespCode.SUCCESS,totalFlag);
+
+        }catch (Exception e) {
+
+            return  new RespModel(RespCode.FAIL,null);
+        }
+    }
 }

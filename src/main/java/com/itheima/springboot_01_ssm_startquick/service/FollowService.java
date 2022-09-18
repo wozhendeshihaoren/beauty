@@ -14,4 +14,24 @@ public interface FollowService {
      * @return
      */
     RespModel insertFollow(Follow follow);
+
+    /**
+     * 更新flag的状态
+     * @param follow
+     * @return
+     */
+    RespModel updateFollow(Follow follow);
+
+    /**
+     * 得到follow中flag为true或为false的数据
+     * @param flag
+     * @return
+     */
+    RespModel getFollowFlagTrue(String flag);
+
+    /**
+     * 获取flag为true的数据
+     * @return
+     */
+    RespModel totalFollowFlag();
 }

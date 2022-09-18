@@ -31,4 +31,24 @@ public interface ProjectService {
      */
     RespModel getNavTitleProject(int proTypeId);
 
+    /**
+     * 收藏项目的查询
+     * @param flag
+     * @return
+     */
+    RespModel getFavItem(String flag);
+
+    /**
+     * 通过id更新flag的状态
+     * @param id
+     * @param flag
+     * @return
+     */
+    RespModel updateProjectFlag(int id ,String flag) ;
+
+    /**
+     * 获取flag为true的数据
+     * @return
+     */
+    RespModel totalCountFlag();
 }

@@ -14,6 +14,7 @@
         <result property="proStatus" column="prostatus"></result>
         <result property="busId" column="busid"></result>
         <result property="tecId" column="tecid"></result>
+        <result property="flag" column="flag"></result>
         <result property="image.imageURL" column="imageurl"></result>
         <result property="business.busName" column="busname"></result>
         <result property="business.serverTime" column="servertime"></result>
@@ -38,9 +39,7 @@
             p.imageid = i.id
           AND
             p.prostatus = '1'
-         <if test="protypeid != null and protypeid != ''">
-           AND  p.protypeid = #{protypeid}
-         </if>
+
     </select>
     <select id="getNavTitleProject" resultMap="projectImageMap">
         SELECT
@@ -65,9 +64,38 @@
             AND  p.protypeid = #{proTypeId}
         </if>
     </select>
+    <select id="getFavItem" resultMap="projectImageMap">
+        SELECT
+        p.id pid,
+        p.proexplain proexplain,
+        p.proprice proprice,
+        p.prostep prostep,
+        p.protypeid protypeid,
+        p.proname proname,
+        p.prostatus prostatus,
+        p.busid busid,
+        p.tecid tecid,
+        p.flag flag,
+
+        i.imageurl imageurl
+        FROM
+        project p,image i
+        WHERE
+        p.imageid = i.id
+        AND
+        p.prostatus = '1'
+        <if test="flag != null and flag !=''">
+            AND  p.flag = #{flag}
+        </if>
+    </select>
 
     <select id="totalCount" resultType="long">
         SELECT COUNT(id) FROM  project
+    </select>
+
+    <select id="totalCountFlag" resultType="long">
+        SELECT COUNT(id) FROM project
+        WHERE flag = 'true'
     </select>
 
     <select id="getById" resultMap="projectImageMap">
@@ -81,6 +109,7 @@
             p.prostatus prostatus,
             p.busid busid,
             p.tecid tecid,
+            p.flag flag,
 
             i.imageurl imageurl,
             b.busname busname,
@@ -96,4 +125,10 @@
           AND p.id = #{id}
     </select>
 
+
+    <update id="updateProjectFlag">
+        UPDATE project
+        SET flag = #{flag}
+        WHERE id = #{id}
+    </update>
 </mapper>

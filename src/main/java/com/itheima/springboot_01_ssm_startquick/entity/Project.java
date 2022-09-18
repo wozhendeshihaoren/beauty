@@ -55,6 +55,11 @@ public class Project implements Serializable {
     
     private Long tecId;
 
+    /**
+     * 是否收藏
+     */
+    private String flag;
+
     private Image image;
     /**
      * 获取商业数据

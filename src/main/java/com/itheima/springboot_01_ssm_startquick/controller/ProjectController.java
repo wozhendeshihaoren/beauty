@@ -38,10 +38,39 @@ public class ProjectController {
     }
 
 
-
+    /**
+     * 根据图标的类型获取数据
+     * @param proTypeId
+     * @return
+     */
     @RequestMapping("/navTitleType")
     public  RespModel getNavTitleProject(int proTypeId){
 
         return projectService.getNavTitleProject(proTypeId);
     }
+
+    /**
+     * 收藏项目的查询
+     * @param flag
+     * @return
+     */
+
+    @RequestMapping("/favItem")
+    public RespModel getFavItem(String flag){
+
+        return projectService.getFavItem(flag) ;
+    }
+
+
+    @RequestMapping("/updateFlag")
+    public  RespModel updateProjectFlag(int id,String flag){
+        return projectService.updateProjectFlag(id,flag);
+    }
+
+
+    @RequestMapping("/totalFlag")
+    public RespModel countTotalFlag() {
+        return projectService.totalCountFlag();
+    }
+
 }

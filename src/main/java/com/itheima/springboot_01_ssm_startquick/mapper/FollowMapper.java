@@ -17,4 +17,23 @@ public interface FollowMapper {
      * @return
      */
    void insertFollow(Follow follow);
+
+    /**
+     * 更新flag的状态
+     * @param follow
+     */
+   void updateFollow(Follow follow);
+
+    /**
+     * 根据flag获取follow中的数据
+     * @param flag
+     * @return
+     */
+   List<Follow> getFollowFlagTrue(String flag);
+
+    /**
+     * 获取flag为true的follow数据
+     * @return
+     */
+   Long totalFollowFlag();
 }

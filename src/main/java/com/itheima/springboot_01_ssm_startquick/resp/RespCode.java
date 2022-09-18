@@ -13,6 +13,7 @@ public enum RespCode {
     SUCCESS_2("2","登录成功"),
     SUCCESS_3("3","预约成功"),
     SUCCESS_4("4","插入成功"),
+    SUCCESS_5("5","更新成功"),
     FAIL("9999","网络异常"),
     FAIL_1("9991","用户名为空"),
     FAIL_2("9992","密码为空"),

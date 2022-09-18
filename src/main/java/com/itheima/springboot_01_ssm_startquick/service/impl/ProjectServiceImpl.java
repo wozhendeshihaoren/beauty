@@ -68,5 +68,44 @@ public class ProjectServiceImpl implements ProjectService {
 
     }
 
+    @Override
+    public RespModel getFavItem(String flag) {
+        try {
+
+
+        List<Project> favItem = projectMapper.getFavItem(flag);
+        return new RespModel(RespCode.SUCCESS,favItem);
+        }catch (Exception e) {
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+    }
+
+    @Override
+    public RespModel updateProjectFlag(int id, String flag) {
+
+
+        try {
+
+            projectMapper.updateProjectFlag(id,flag);
+
+            return new RespModel(RespCode.SUCCESS_5,null);
+        }catch (Exception e) {
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+    }
+
+    @Override
+    public RespModel totalCountFlag() {
+        try {
+            long flagTotal = projectMapper.totalCountFlag();
+            return new RespModel(RespCode.SUCCESS,flagTotal);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new RespModel(RespCode.FAIL,null);
+        }
+    }
+
 
 }

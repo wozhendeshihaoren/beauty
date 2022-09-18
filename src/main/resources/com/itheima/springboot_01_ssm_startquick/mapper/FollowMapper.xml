@@ -8,4 +8,26 @@
         VALUES (#{imageURL},#{techExplain},#{techName},#{flag},#{tid})
     </insert>
 
+    <update id="updateFollow" parameterType="com.itheima.springboot_01_ssm_startquick.entity.Follow">
+        UPDATE follow
+        SET flag = #{flag}
+        WHERE tid = #{tid}
+    </update>
+
+    <select id="getFollowFlagTrue" parameterType="java.lang.String" resultType="com.itheima.springboot_01_ssm_startquick.entity.Follow">
+        SELECT
+            id,
+            imageurl,
+            techexplain,
+            techname,
+            flag,
+            tid
+        FROM follow
+        WHERE flag = #{flag}
+    </select>
+
+    <select id="totalFollowFlag" resultType="long">
+        SELECT COUNT(id) FROM follow
+        WHERE flag = 'true'
+    </select>
 </mapper>

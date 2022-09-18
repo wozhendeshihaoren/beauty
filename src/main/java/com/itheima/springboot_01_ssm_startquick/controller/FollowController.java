@@ -22,4 +22,20 @@ public class FollowController {
 
         return followService.insertFollow(follow);
     }
+
+    @RequestMapping("/updateId")
+    public  RespModel updateFollow(Follow follow){
+        return  followService.updateFollow(follow);
+    }
+
+    @RequestMapping("/getFollowFlagTrue")
+    public  RespModel getFollowFlagTrue(String flag){
+        return followService.getFollowFlagTrue(flag);
+    }
+
+
+    @RequestMapping("/totalFlag")
+    public  RespModel totalFollowFlag(){
+        return followService.totalFollowFlag();
+    }
 }
