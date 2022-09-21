@@ -10,8 +10,7 @@ import java.util.List;
 /**
  * (Technician)实体类
  *
- * @author makejava
- * @since 2022-08-03 09:36:08
+ * @author woshihaoren
  */
 @Data
 @AllArgsConstructor

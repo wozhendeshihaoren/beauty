@@ -20,6 +20,10 @@ public class TechnicianServiceImpl implements TechnicianService {
     @Autowired
     private TechnicianMapper technicianMapper;
 
+    /**
+     * 获取所有技师的信息
+     * @return
+     */
     @Override
     public RespModel getTechnicianAll() {
         try {
@@ -31,10 +35,16 @@ public class TechnicianServiceImpl implements TechnicianService {
         }
     }
 
+    /**
+     * 根据技师的id获取技师和技师相关项目的信息
+     * @param id
+     * @return
+     */
     @Override
     public RespModel getTechnicianOne(int id) {
 
          try {
+
              //根据id请求技师的信息
              List<Technician> technicianOne = technicianMapper.getTechnicianOne(id);
              Technician technician = technicianOne.get(0);

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * (Follow)实体类
  * @author woshihaoren
  */
 @Data

@@ -19,6 +19,11 @@ public class FollowServiceImpl implements FollowService {
     @Autowired
     private FollowMapper followMapper;
 
+    /**
+     * 插入一条关注的信息
+     * @param follow
+     * @return
+     */
     @Override
     public RespModel insertFollow(Follow follow) {
 
@@ -33,6 +38,12 @@ public class FollowServiceImpl implements FollowService {
 
     }
 
+
+    /**
+     * 更新一条关注信息
+     * @param follow
+     * @return
+     */
     @Override
     public RespModel updateFollow(Follow follow) {
 
@@ -47,6 +58,11 @@ public class FollowServiceImpl implements FollowService {
 
     }
 
+    /**
+     * 获取所有关注的信息
+     * @param flag
+     * @return
+     */
     @Override
     public RespModel getFollowFlagTrue(String flag) {
         try {
@@ -60,6 +76,10 @@ public class FollowServiceImpl implements FollowService {
         }
     }
 
+    /**
+     * 获取所有关注的数目
+     * @return
+     */
     @Override
     public RespModel totalFollowFlag() {
 

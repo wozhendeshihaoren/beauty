@@ -9,8 +9,7 @@ import java.io.Serializable;
 /**
  * (Business)实体类
  *
- * @author makejava
- * @since 2022-08-03 09:27:02
+ * @author woshihaoren
  */
 @Data
 @NoArgsConstructor

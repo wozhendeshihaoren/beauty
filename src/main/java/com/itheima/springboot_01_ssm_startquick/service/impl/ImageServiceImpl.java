@@ -18,6 +18,11 @@ public class ImageServiceImpl implements ImageService {
     @Autowired
     private ImageMapper imageMapper;
 
+    /**
+     * 根据图片的type来获取图片的信息
+     * @param type
+     * @return
+     */
     @Override
     public List<Image> getImageByType(String type) {
         return imageMapper.getImageByType(type);

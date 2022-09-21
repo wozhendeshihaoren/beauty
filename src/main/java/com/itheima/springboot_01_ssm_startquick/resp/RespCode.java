@@ -3,8 +3,8 @@ package com.itheima.springboot_01_ssm_startquick.resp;
 import lombok.Data;
 
 /**
- * @author qin
- * @create 2022--09--07--16:43
+ * @author woshihaoren
+
  */
 
 public enum RespCode {

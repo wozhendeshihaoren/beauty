@@ -28,6 +28,12 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMapper orderMapper;
 
+    /**
+     * 根据token和订单来向数据库插入一条订单信息
+     * @param token
+     * @param order
+     * @return
+     */
     @Override
     public RespModel createOrder(String token, Order order) {
         try {
@@ -62,8 +68,15 @@ public class OrderServiceImpl implements OrderService {
 
     }
 
+    /**
+     * g根据
+     * @param token 根据用户的token去查询openid
+     * @param state 订单的状态
+     * @return
+     */
     @Override
     public RespModel getOrderAll(String token, String state) {
+
         /**
          * 先根据tonken获取用户的openid
          */

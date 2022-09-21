@@ -6,8 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 统一结果处理
- * @author qin
- * @create 2022--09--07--9:48
+ * @author woshihaoren
  */
 @Data
 public class RespModel {

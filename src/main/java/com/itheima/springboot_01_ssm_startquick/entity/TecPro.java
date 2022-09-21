@@ -9,8 +9,7 @@ import java.io.Serializable;
 /**
  * (Tecpro)实体类
  *
- * @author makejava
- * @since 2022-08-03 09:37:04
+ * @author woshihaoren
  */
 @Data
 @AllArgsConstructor

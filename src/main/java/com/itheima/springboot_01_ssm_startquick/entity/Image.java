@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 /**
  * (Image)实体类
  *
- * @author makejava
- * @since 2022-08-03 09:28:46
+ * @author woshihaoren
  */
 
 @Data

@@ -3,13 +3,14 @@ package com.itheima.springboot_01_ssm_startquick.mapper;
 import com.itheima.springboot_01_ssm_startquick.entity.Follow;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
  * @author woshihaoren
  */
 @Mapper
-public interface FollowMapper {
+public interface FollowMapper extends Comparator {
 
     /**
      * 插入数据

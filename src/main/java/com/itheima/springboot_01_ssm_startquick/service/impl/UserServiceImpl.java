@@ -27,13 +27,22 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    /**
+     * 注册请求,根据输入进来的信息
+     * @param user
+     * @return
+     */
     @Override
     public RespModel register(User user) {
+
           try {
+              //获取前端传来的数据
               String username = user.getUsername();
               String password = user.getPassword();
               String phone = user.getPhone();
 
+              //对数据进行判空和格式判断
               if (StringCheckUtil.isEmpty(username)) {
                   return new RespModel(RespCode.FAIL_1, null);
               }
@@ -50,9 +59,12 @@ public class UserServiceImpl implements UserService {
               if (byPhone.size() > 0) {
                   return new RespModel(RespCode.ERROR_5, null);
               }
+
+              //对密码进行加密
               Md5Hash md5Hash = new Md5Hash(password, "huahui", 10);
               String _password = md5Hash.toString();
               user.setPassword(_password);
+
               // 第四步：存入数据库
               userMapper.insert(user);
               return new RespModel(RespCode.SUCCESS_1, user);
@@ -63,6 +75,11 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    /**
+     * 登录请求
+     * @param loginDate
+     * @return
+     */
     @Override
     public RespModel login(LoginDate loginDate) {
        try {
@@ -95,15 +112,20 @@ public class UserServiceImpl implements UserService {
         if(!user.getPassword().equals(_password.toString())) {
             return new RespModel(RespCode.ERROR_6,null);
         }
-        //通过code获取token和sessionkey
+
+        //通过code和appid获取sessionkey和openid
          String url = "https://api.weixin.qq.com/sns/jscode2session?appid=wx653c4fc62caffeb9&secret=d7d52df9880c02342c2639df6e7d8dba&js_code=" + code + "&grant_type=authorization_code";
+
         String s = HttpClientUtil.doGet(url);
         JSONObject parse = (JSONObject) JSONObject.parse(s);
         String session_key = (String) parse.get("session_key");
         String openid = (String) parse.get("openid");
-        //自定义token
+
+        //自定义token,openid为盐值，对session_key加密10次获得token
         Md5Hash md5Hash = new Md5Hash(session_key, openid, 10);
         String token = md5Hash.toString();
+
+        //将获得的数据封装进user实体，然后存入数据库
         user.setSessionKey(session_key);
         user.setOpenId(openid);
         user.setToken(token);
