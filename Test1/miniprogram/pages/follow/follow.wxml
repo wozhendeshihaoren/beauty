@@ -1,0 +1,52 @@
+<view class="perInformation" >
+   <view class ="{{currentActive === index? 'perInformationItem':''}}" wx:for="{{perInformation}}" wx:key="index" catchtap="currentAction" 
+   data-perindex="{{index}}">{{item}}</view>
+</view>
+
+<swiper circular = "true" current="{{currentActive}}" bindchange="currentChange">
+<swiper-item >
+  <scroll-view class = "scroll" scroll-y="true">
+  <view class="techContent" wx:for="{{conProjects}}" wx:key="index">
+  <view class="techItem"  >
+    <image src="{{imageurl+item.image.imageURL}}"></image>
+   <view class="right">
+        <view class="techInfo">
+          <view class="techName">{{item.proName}}</view>
+          <view class="proPrice">价格：￥{{item.proPrice}}</view>
+          <view class="techExplain">{{item.proExplain}}</view>
+        </view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+</swiper-item>
+<swiper-item >
+ <scroll-view class = "scroll" scroll-y="true">
+ <view wx:for="{{roster}}" wx:key="index">
+  <view class="techContent" >
+  <view class="techItem"  >
+    <image src="{{imageurl+item.imageURL}}"></image>
+   <view class="right">
+        <view class="techInfo">
+          <view class="techName">{{item.techName}}</view>
+          <view class="techExplain">{{item.techExplain}}</view>
+        </view>
+    </view>
+  </view>
+</view>
+</view>
+</scroll-view>
+</swiper-item>
+<swiper-item >
+  <view class="user">
+     <view class="userImage">
+     <image src="{{user.imageURL}}"></image>
+    </view>
+    <view class="userInfo">
+     <view space="nbsp&nbsp" > 微   信  名  : {{user.nickName}}</view>
+     <view space="nbsp">  用    户      名    : {{user.username}}</view>
+     <view space="nbsp"> 联系方式  : {{user.phone}}</view>
+    </view>
+  </view>
+</swiper-item>
+</swiper>

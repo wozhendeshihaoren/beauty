@@ -1,0 +1,47 @@
+{
+  "pages": [
+  
+    "pages/start/start",
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/preDeatils/preDeatils",
+    "pages/logins/logins",
+    "pages/order/order",
+    "pages/technicianx/technicianx",
+    "pages/thchDetails/thchDetails",
+    "pages/toNavDetails/toNavDetails",
+    "pages/follow/follow",
+    "pages/exit/exit",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首頁",
+        "iconPath": "/pages/static/images/index_icon.png",
+        "selectedIconPath": "/pages/static/images/index_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/technicianx/technicianx",
+        "text": "技师",
+        "iconPath": "/pages/static/images/user_icon.png",
+        "selectedIconPath": "/pages/static/images/user_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "/pages/static/images/user_icon.png",
+        "selectedIconPath": "/pages/static/images/user_icon_HL.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,171 @@
+
+.userInfo {
+  width: 90%;
+  height: 250rpx;
+  border: 1rpx solid AliceBlue;
+  margin: 100rpx auto 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx DarkGrey;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.userInfo image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.username {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-style:inherit;
+  font-size: 30rpx;
+}
+.userInfo .operation{
+  display: flex;
+  position: absolute;
+  font-size: 25rpx;
+  color: #888;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%);
+}
+/*
+*默认头像布局
+*/
+.userInfo .operation .operationItem{
+  margin-left: 20rpx;
+}
+
+.box_1 {
+  width: 90%;
+  height: 250rpx;
+  border: 1rpx solid AliceBlue;
+  margin: 100rpx auto 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx DarkGrey;
+  border-radius: 20rpx;
+  position: relative;
+  background:linear-gradient(35deg,#ccffff,#ffcccc);
+}
+.box_1 image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.box_1 .text1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-style:inherit;
+  font-size: 30rpx;
+  color: Violet;
+}
+.box_1 .text2 {
+  position: absolute;
+  left: 50%;
+  top: 69%;
+  transform: translate(-50%,-50%);
+  font-style:inherit;
+  font-size: 30rpx;
+  color: Violet;
+}
+
+/* 订单部分 */
+.orderContent{
+  width: 90%;
+  margin: 20rpx auto;
+}
+.orderTitle{
+  display: flex ;
+  justify-content: space-between;
+  font-size: 35rpx;
+  color: #888;
+}
+
+
+.orderTitle .active{
+  color: #ff0000;
+  border-bottom: 5rpx solid #ff0000;
+}
+
+swiper{
+  /* border: 1rpx solid black; */
+  height: 685rpx;
+}
+.busName{
+  font-size: 35rpx;
+  font-weight: bold;
+  margin: 20rpx;
+}
+.orderItem{
+  border: 1rpx solid #dbd2d8;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  box-shadow: 0rpx 0rpx 20rpx -5rpx #999;
+}
+.proInfo {
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 0 20rpx;
+}
+.proInfo image{
+  width: 300rpx;
+  height: 160rpx;
+}
+.orderInfo{
+  margin-left: 20rpx;
+}
+.orderInfo view{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: #666;
+}
+.proName{
+  /*  // 移动端设备自适应布局 */
+display: -webkit-box;
+/* // 两行文字大概的高度 */
+width: 250rpx;
+/* height: 29px;	 */
+/* // 溢出隐藏 */
+overflow: hidden;	
+/* // 溢出省略号表示 */
+text-overflow: ellipsis; 
+/* // 限制两行 */
+-webkit-line-clamp: 1; 
+/* // 垂直排列 */
+-webkit-box-orient: vertical; 
+}
+.price{
+  /* 使用弹性布局会导致浮动失效 */
+  /* float:right; */
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 20rpx 20rpx;
+  align-items: flex-end;
+  /* display: flex;  */
+  align-items: baseline;
+  /* align-content: center; */
+}
+.price text:nth-child(1){
+  font-size: 26rpx;
+  color: #999;
+  margin-right: 10rpx;
+}
+.price text:nth-child(2){
+  font-size: 45rpx;
+  font-weight: bold;
+}
+
+.scroll {
+  height: 100%;
+}

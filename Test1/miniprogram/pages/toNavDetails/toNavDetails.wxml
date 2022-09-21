@@ -1,0 +1,24 @@
+<view class="navTitle" >
+   <view wx:for="{{navTitle}}" wx:key="index" bindtap="navTitleTab" data-index="{{index}}" class="{{currentActive === index? 'active':''}}">{{item}}</view>
+</view>
+
+<swiper circular = "true" current="{{currentActive}}"  bindchange="currentChange">
+<swiper-item  wx:for="{{navTitle}}" wx:key="index">
+<scroll-view class="scroll" scroll-y="true">
+<view class="proContent" wx:for="{{projects}}" wx:key="index" bindtap="toProDetails"  data-id="{{item.id}}">
+  <view class="proItem" >
+    <image src="{{imageurl+item.image.imageURL}}"></image>
+    <view class="right">
+        <view class="proInfo">
+          <view class="proName">{{item.proName}}</view>
+          <view class="proPrice">价格：￥{{item.proPrice}}</view>
+          <view class="proExplain">{{item.proExplain}}
+          </view>
+        </view>
+        <view class="btn" catchtap="toOrder" data-proId="{{item.id}}">预约</view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+</swiper-item>
+</swiper>

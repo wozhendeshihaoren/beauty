@@ -1,0 +1,85 @@
+page {
+  width: 100%;
+}
+image {
+  width: 90%;
+  height: 350rpx;
+  margin-left: 40rpx;
+}
+
+.box{
+  width: 100%;
+  height: 280rpx;
+}
+.box .box_1{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.box .box_1 .techName{
+  text-align: center;
+ 
+  font-size: 45rpx;
+}
+.box .techExplain {
+  
+  width: 700rpx;
+
+  font-size: 30rpx;
+  color: #666;
+  /* 首行缩进2个字符 */
+  margin: auto;
+  text-indent:2em;
+}
+
+.box2 {
+  font-weight: bold;
+  margin-left: 29rpx;
+
+}
+
+.box3{ 
+  display: flex;
+  margin-top: 30rpx;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  border-bottom: 5rpx solid #666;
+  height: 90rpx;
+  line-height:90rpx ;
+  
+}
+.box3 .proName {
+
+  color: #666;
+  display: -webkit-box;
+  /* // 两行文字大概的高度 */
+  width: 330rpx;
+  /* // 溢出隐藏 */
+  overflow: hidden;	
+  /* // 溢出省略号表示 */
+  text-overflow: ellipsis; 
+  /* // 限制两行 */
+  -webkit-line-clamp: 1; 
+}
+
+
+ .btn{
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #d24a58;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 50%;
+  font-size: 25rpx;
+  font-weight: bold;
+  color: white;
+  margin-right: 10rpx;
+}
+.box2 text {
+    color: black;
+    font-weight: 20rpx;
+    position: relative;
+    right: -300rpx;
+    background-color:#d24a58 ;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+}

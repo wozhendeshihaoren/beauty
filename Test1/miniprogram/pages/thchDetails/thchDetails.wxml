@@ -1,0 +1,19 @@
+
+<image src="{{imageurl+technician.imageURL}}"></image>
+<view class="box">
+  <view class="box_1">
+   <view class="techName">【{{technician.techName}}】</view>
+ </view>
+   <view class="techExplain">{{technician.techExplain}}</view>
+</view>
+   
+<view>
+  <view class="box2">【服务内容】 <text wx:if="{{!flag}}" catchtap="toFollow" data-thch="{{technician}}">点击关注</text><text wx:else catchtap="cancelFollow" data-tech="{{technician}}">已关注</text></view> 
+  <view class="box3" wx:for="{{technician.projects}}" wx:key="index">
+     <view class="proName">{{item.proName}}</view>
+     <view class="proPrice">￥<text>{{item.proPrice}}</text></view>
+     <view class="btn" catchtap="toOrder" data-proid="{{item.id}}">预约</view>
+   </view>
+   
+</view>
+  

@@ -1,0 +1,12 @@
+<view class="techContent">
+  <view class="techItem"  wx:for="{{technicians}}" wx:key="index" bindtap="toTechDetails" data-id="{{item.id}}" >
+    <image src="{{imageurl+item.imageURL}}"></image>
+   <view class="right">
+        <view class="techInfo">
+          <view class="techName">{{item.techName}}</view>
+          <view class="techExplain">{{item.techExplain}}</view>
+        </view>
+    </view>
+  
+  </view>
+</view>

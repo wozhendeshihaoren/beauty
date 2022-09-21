@@ -1,0 +1,33 @@
+<scroll-view class="scroll" 	scroll-y="true" bindscrolltolower ="lower" >
+<view>
+   <swiper class="banner" indicator-dots = "true" 	autoplay = "true" interval = "1000" 	circular = "true">
+     <swiper-item class="lubotu" wx:for="{{banners}}" wx:key="index" >
+       <image class="image1" src="{{imageurl+item.imageURL}}"></image>
+     </swiper-item>
+   </swiper>
+
+   <view class="box">
+   <view class="box_1" wx:for="{{navs}}" wx:key="index" >
+     <image  class = "image2" src="{{imageurl+item.imageURL}}"   catchtap="toNavDetails" data-id="{{item.id}}"></image>
+     <view>{{item.imageTitle}}</view>
+   </view>
+   </view>
+   
+ <!-- 美容项目列表部分 -->
+<view class="proContent">
+  <view class="proItem" wx:for="{{projects}}" wx:key="index" bindtap="toProDetails"   data-id="{{item.id}}">
+    <image src="{{imageurl+item.image.imageURL}}"></image>
+    <view class="right">
+        <view class="proInfo">
+          <view class="proName">{{item.proName}}</view>
+          <view class="proPrice">价格：￥{{item.proPrice}}</view>
+          <view class="proExplain">
+            {{item.proExplain}}
+          </view>
+        </view>
+        <view class="btn" catchtap="toOrder" data-proId="{{item.id}}">预约</view>
+    </view>
+  </view>
+</view>
+</view>
+</scroll-view>

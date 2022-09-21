@@ -1,0 +1,78 @@
+
+.techContent{
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 20rpx; */
+  padding: 0 20rpx;
+}
+.techItem{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  /* border: 1rpx solid #999; */
+  border-radius: 15rpx;
+  overflow: hidden;
+  box-shadow: 0 5rpx 10rpx #666;
+  height: 250rpx;
+
+}
+.techItem image{
+  height: 200rpx;
+   margin: auto 10rpx;
+   width: 200rpx;
+}
+
+.right{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rpx;
+  align-items: center;
+  width: 550rpx;
+}
+.techItem .proInfo{
+  width: 400rpx;
+  margin-right: 20rpx;
+}
+.techInfo .proName{
+  position: relative;
+  top: -20rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  /* // 两行文字大概的高度 */
+  width: 300rpx;
+  /* height: 29px;	 */
+  /* // 溢出隐藏 */
+  overflow: hidden;	
+  /* // 溢出省略号表示 */
+  text-overflow: ellipsis; 
+  /* // 限制两行 */
+  -webkit-line-clamp: 1; 
+  /* // 垂直排列 */
+  -webkit-box-orient: vertical; 
+}
+.techInfo .techExplain{
+  position: relative;
+  top: -10rpx;
+  /* 超出两行一定距离用省略号表示   开始 */
+  /*  // 移动端设备自适应布局 */
+  display: -webkit-box;
+  /* // 两行文字大概的高度 */
+  width: 500rpx;
+  /* height: 29px;	 */
+  /* // 溢出隐藏 */
+  overflow: hidden;	
+  /* // 溢出省略号表示 */
+  text-overflow: ellipsis; 
+  /* // 限制两行 */
+  -webkit-line-clamp: 3; 
+  /* // 垂直排列 */
+  -webkit-box-orient: vertical; 
+  /* 结束 */
+  font-size: 30rpx;
+  color: #666;
+  /* 首行缩进2个字符 */
+  text-align: left;
+  
+}
+

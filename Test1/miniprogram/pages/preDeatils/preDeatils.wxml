@@ -1,0 +1,17 @@
+
+<image src="{{imageurl+project.image.imageURL}}"></image>
+<view class="box">
+  <view class="box_1">
+   <view class="preName">{{project.proName}}</view>
+   <view class="prePrice">价格：￥{{project.proPrice}}</view>
+ </view>
+   <view class="preExplain">{{project.proExplain}}</view>
+</view>
+   
+<view>
+<view class="title">
+  <view class="box2">详情 <text wx:if="{{!flag}}" class="toConProject" catchtap="toConProject" data-proid="{{project.id}}">点击收藏</text><text wx:else="" catchtap="toConProject2" data-proid="{{project.id}}" >已收藏</text></view>
+</view>
+  <view class="preSetup">{{project.proStep}}</view>
+</view>
+  <button bindtap="toOrder" data-proid="{{project.id}}">立即预约</button>

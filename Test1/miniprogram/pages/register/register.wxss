@@ -1,0 +1,32 @@
+.form .formItem{
+  display: flex;
+  /* 垂直方向居中 */
+  align-items: center;
+  /* 水平方向居中 */
+  justify-content: center;
+  margin-top: 50rpx;
+}
+.form .formItem input{
+  border: 1rpx solid #999;
+  font-size: 25rpx;
+  padding-left: 20rpx;
+}
+.form .formItem text{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #555;
+}
+.btn{
+  background-color: #d24a58;
+  margin-top: 50rpx;
+  color: white;
+}
+.toLogin{
+  width: 200rpx;
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+  color: red;
+  margin: 30rpx auto;
+  /* border-bottom: 1rpx solid red; */
+  text-decoration: underline;
+}

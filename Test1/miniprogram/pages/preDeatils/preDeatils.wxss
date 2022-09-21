@@ -1,0 +1,55 @@
+/* pages/preDeatils/preDeatils.wxss */
+image {
+  width: 100%;
+}
+page{
+  background-color: plum;
+}
+.box {
+  display: flex;
+  padding:0 20px;
+  flex-direction: column;
+}
+
+.box_1 {
+  display: flex;
+  margin-top: 20rpx;
+  
+}
+.preName {
+  margin-left: 40rpx;
+}
+.prePrice {
+   margin-left: 200rpx;
+}
+.preExplain {
+  margin-top: 20rpx;
+}
+
+
+.box2 {
+  border-top: 1rpx solid black;
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+.box2 text {
+   color: black;
+    font-weight: 40rpx;
+    position: relative;
+    right: -400rpx;
+    background-color:#d24a58 ;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    padding: 20rpx;
+}
+
+.preSetup {
+   padding-left: 40rpx;
+}
+button{
+  background-color: #ff0066;
+  margin-top: 30rpx;
+}
+

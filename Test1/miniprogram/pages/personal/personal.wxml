@@ -1,0 +1,62 @@
+<view wx:if="{{flag}}">
+   <view class="box_1">
+     <image src="../static/images/touxiang.jpeg" bindtap="toExit"></image>
+      <view class="text1" bindtap="toRegister">没有账号，去注册</view>
+      <view class="text2" bindtap="toLogins">已有账号，去登录</view>
+    </view>
+ </view>
+<view class="userContent" wx:else>
+  <view class="userInfo">
+    <image src="{{userInfo.imageURL}}"  bindtap="toExit"></image>
+    <view class="username">{{userInfo.nickName}}</view>
+    <view class="operation" >
+      <view class="operationItem" catchtap="toFollow" data-id="0">
+        <text>{{totalFlag}}</text>
+        <text>收藏</text>
+      </view>
+      <view class="operationItem">|</view>
+      <view class="operationItem" catchtap="toFollow" data-id="1">
+        <text>{{totalFollowFlag}}</text>
+        <text>关注</text>
+      </view>
+      <view class="operationItem">|</view>
+      <view class="operationItem" catchtap="toFollow" data-id="2">
+        <text>个</text>
+        <text>人</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class="orderContent">
+    <!-- 标题部分 -->
+    <view class="orderTitle" >
+   
+      <view wx:for="{{orderType}}" wx:key="index" bindtap="orderTypeTap" data-index="{{index}}" class="{{currentActive === index? 'active':''}}">{{item}}</view>
+      
+    </view>
+    <!-- 订单展示部分 -->
+    <swiper circular = "true" current="{{currentActive}}" 	bindchange="currentChange">
+        <swiper-item wx:for="{{orderType}}" wx:key="index" >
+          <scroll-view class="scroll" scroll-y="true">
+            <view class="orderItem" wx:for="{{orders}}" wx:key="index">
+                <view class="busName">{{item.business.busName}}</view>
+                <view class="proInfo">
+                    <image src="{{imageurl+item.project.image.imageURL}}"></image>
+                    <view class="orderInfo">
+                        <view>{{item.proName}}</view>
+                        <view>{{item.business.serverTime}}</view>
+                        <view>{{item.makeDate}}</view>
+                    </view>
+                </view>
+                <view class="price">
+                    <text>价格：￥</text>
+                    <text>{{item.project.proPrice}}</text>
+                </view>
+            </view>
+          </scroll-view>
+           
+        </swiper-item>
+    </swiper>
+  </view>
+

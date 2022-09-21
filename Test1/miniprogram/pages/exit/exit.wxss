@@ -1,0 +1,57 @@
+.userInfo{
+  width: 90%;
+  height: 500rpx;
+  border: 1rpx solid #dbd2d8;
+  margin: 100rpx auto 20rpx;
+  border-radius: 25rpx;
+  box-shadow: 0rpx 0rpx 20rpx -5rpx #999;
+  position: relative;
+}
+.userInfo image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.userInfo .username{
+  position: absolute;
+  font-size: 40rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,-50%);
+}
+
+.content{
+  width: 75%;
+  height: 240rpx;
+  border: 2rpx solid black;
+  border-radius: 25rpx;
+  box-shadow: 0rpx 0rpx 20rpx -5rpx #999;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+}
+.content .contentItem{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #999;
+}
+/* .content .contentItem .register{
+  background-color: yellow;
+}
+.content .contentItem .login{
+  background-color: green;
+}
+.content .contentItem .exit{
+  background-color: red;
+} */

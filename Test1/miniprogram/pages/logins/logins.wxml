@@ -1,0 +1,15 @@
+<view class="registerContent">
+  <form class="form" catchsubmit="formSubmit">
+    <view class="formItem" >
+      <text>手机号码：</text>
+      <input name = "phone" placeholder="请输入手机号码..."/>
+    </view>
+    <view class="formItem" >
+      <text space="nbsp">密       码：</text>
+      <input name ="password" placeholder="请输入密码..."/>
+    </view>
+    <button class="btn" formType="submit">登录账号</button>
+  </form>
+  <view class="toLogin" bindtap="toRegister">已有账号，去登录...</view>
+
+</view>

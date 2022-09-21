@@ -1,0 +1,24 @@
+<!-- 头像 -->
+<view class="userContent">
+  <view class="userInfo">
+    <image wx:if="{{isLogin}}" src="{{user.imageURL}}"></image>
+    <image wx:else="" src="/static/img/smt.jpeg"></image>
+    <view wx:if="{{isLogin}}" class="username">{{user.nickName}}</view>
+    <view wx:else="" class="username">未命名</view>
+  </view>
+  <!-- 功能 -->
+  <view class="content">
+    <view class="contentItem">
+      <text class="register" bindtap="toRegister">注册</text>
+    </view>
+     <view class="contentItem">
+      <text class="login" bindtap="toLogin">登录</text>
+    </view>
+    <view class="contentItem">
+      <text class="exit" bindtap="toExit">退出</text>
+  </view>
+</view>
+  
+</view>
+
+
